@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de VPD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de VPD</h1>
+        <label for="stage">Etapa de la planta:</label>
+        <select id="stage" onchange="updateVPDInfo()">
+            <option value="clonacion">Clonación</option>
+            <option value="vegetacion">Vegetación</option>
+            <option value="floracion_estiramiento">Floración (Estiramiento)</option>
+            <option value="floracion_engorde">Floración (Engorde)</option>
+        </select>
+        <p id="vpdInfo" class="info-text">VPD rango óptimo 0.4 - 0.8 kPa</p> <!-- Línea de texto dinámica -->
+
+        <div class="toggle-container">
+            <button id="btnC" class="toggle-btn active" onclick="setUnit('C')">°C</button>
+            <button id="btnF" class="toggle-btn" onclick="setUnit('F')">°F</button>
+        </div>
+
+        <label id="temperatureLabel" for="temperature">Temperatura (°C):</label>
+        <input type="number" id="temperature" inputmode="decimal" placeholder="Ingresa la temperatura en °C">
+
+        <label for="humidity">Humedad Relativa (%):</label>
+        <input type="number" id="humidity" inputmode="numeric" maxlength="3" placeholder="Ingresa la HR (1-100)" min="1" max="100">
+
+        <button id="calculateButton" disabled onclick="calculateVPD()">Calcular</button>
+
+        <div class="result" id="result"></div>
+        <div class="suggestion" id="suggestion"></div>
+        <div class="warning" id="warning"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
