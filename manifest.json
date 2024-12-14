@@ -1,0 +1,21 @@
+{
+  "name": "Calculadora de VPD",
+  "short_name": "VPDCalc",
+  "description": "Calculadora de VPD para el manejo óptimo de plantas.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f5f7",
+  "theme_color": "#007aff",
+  "icons": [
+    {
+      "src": "./icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
