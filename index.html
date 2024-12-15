@@ -18,6 +18,20 @@
             <option value="floracion_engorde">Floración (Engorde)</option>
         </select>
         <p id="vpdInfo" class="info-text">VPD rango óptimo 0.4 - 0.8 kPa</p> <!-- Línea de texto dinámica -->
+        <!-- Texto estilo link para abrir el modal -->
+        <p class="info-link">
+            <a id="openModal" href="javascript:void(0);">¿Qué es el VPD?</a>
+        </p>
+        
+        <!-- Modal -->
+        <div id="vpdModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close-button">&times;</span>
+                <h2>¿Qué es el VPD?</h2>
+                <p>El Déficit de Presión de Vapor (VPD) mide el equilibrio entre la humedad y la temperatura en un ambiente. Es clave para asegurar el crecimiento óptimo de las plantas, afectando la transpiración y la absorción de nutrientes.</p>
+                <p>Un VPD en el rango ideal asegura que tus plantas crezcan saludables y sin estrés.</p>
+            </div>
+        </div>
 
         <div class="toggle-container">
             <button id="btnC" class="toggle-btn active" onclick="setUnit('C')">°C</button>

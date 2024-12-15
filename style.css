@@ -115,3 +115,107 @@ button[disabled] {
   font-size: 16px;
   color: #ff9800;
 }
+/* Estilo para el enlace "¿Qué es el VPD?" */
+.info-link a {
+    font-size: 12px; /* Más pequeño que el resto del texto */
+    color: #007aff; /* Color azul */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.info-link a:hover {
+    color: #005bb5; /* Color más oscuro al pasar el ratón */
+}
+/* ======== Modal ======== */
+
+/* Fondo oscuro del modal (invisible por defecto) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: white;
+    margin: 10% auto; /* Márgenes automáticos para centrar */
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px; /* Máximo ancho para pantallas grandes */
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+/* ======== Ajustes para Pantallas Pequeñas ======== */
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 5% 10%; /* Reducir márgenes en móviles */
+        width: 80%; /* Asegurarse de que el modal no ocupe todo el ancho */
+        max-width: none; /* Quitar límite de ancho */
+        padding: 15px; /* Ajustar el espaciado interno */
+    }
+
+    .close-button {
+        font-size: 20px; /* Reducir tamaño del ícono de cierre */
+    }
+
+    .modal-content h2 {
+        font-size: 18px; /* Ajustar el tamaño del título */
+    }
+
+    .modal-content p {
+        font-size: 14px; /* Reducir tamaño del texto en móviles */
+    }
+}
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+/* Botones */
+button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Campos de entrada */
+input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+}
+/* Ocultar flechas en campos de tipo número (Chrome, Edge, Opera) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Elimina las flechas en navegadores basados en WebKit */
+    margin: 0; /* Elimina el espacio reservado */
+}
+
+/* Ocultar flechas en Firefox */
+input[type="number"] {
+    -moz-appearance: textfield; /* Cambia el aspecto del campo en Firefox */
+}
+

@@ -167,4 +167,26 @@ if ('serviceWorker' in navigator) {
         .then(() => console.log('Service Worker registrado con éxito.'))
         .catch((error) => console.error('Error al registrar el Service Worker:', error));
 }
+// Referencias a los elementos
+const openModal = document.getElementById('openModal'); // Enlace del modal
+const closeModal = document.getElementById('closeModal'); // Botón de cierre
+const vpdModal = document.getElementById('vpdModal'); // Modal completo
+
+// Abrir el modal al hacer clic en el enlace
+openModal.addEventListener('click', (event) => {
+    event.preventDefault(); // Previene comportamiento por defecto del enlace
+    vpdModal.style.display = 'block'; // Muestra el modal
+});
+
+// Cerrar el modal al hacer clic en el botón de cierre
+closeModal.addEventListener('click', () => {
+    vpdModal.style.display = 'none'; // Oculta el modal
+});
+
+// Cerrar el modal al hacer clic fuera del contenido
+window.addEventListener('click', (event) => {
+    if (event.target === vpdModal) {
+        vpdModal.style.display = 'none'; // Oculta el modal
+    }
+});
 
