@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vpd-calculator-cache-v1';
+const CACHE_NAME = 'vpd-calculator-cache-v2';
 const urlsToCache = [
     './',
     './index.html',
